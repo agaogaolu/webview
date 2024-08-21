@@ -1,5 +1,5 @@
 <template>
-  <el-container style="height: 100vh;">
+  <el-container style="height: 100vh; width: 100vw;">
     <el-aside width="200px" style="background-color: #545c64;">
       <el-menu
         :default-active="activeMenu"
@@ -24,8 +24,8 @@
       </el-menu>
     </el-aside>
 
-    <el-container>
-      <el-main style="display: flex; justify-content: center; align-items: center;">
+    <el-container class="right">
+      <el-main>
         <component :is="currentComponent"></component>
       </el-main>
     </el-container>
@@ -81,6 +81,7 @@ export default {
   padding: 0;
   margin: 0;
 }
+
 .el-aside {
   display: flex;
   background-color: #545c64;
@@ -94,14 +95,24 @@ export default {
 }
 
 .el-menu-item {
-
   padding: 0 20px;
 }
 
 .el-menu-item .el-icon {
   margin-right: 10px;
 }
-.el-main{
-  
+
+.right {
+  width: 100vh;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.el-main {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  width: 100vh;
 }
 </style>
