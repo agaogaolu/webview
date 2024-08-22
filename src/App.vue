@@ -114,5 +114,6 @@ export default {
   justify-content: center; /* 水平居中 */
   align-items: center; /* 垂直居中 */
   width: 100vh;
+  padding: 0;
 }
 </style>
