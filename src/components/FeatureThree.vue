@@ -46,6 +46,13 @@ export default {
   },
   methods: {
     handleBeforeUpload(file) {
+
+      const isJPG = file.type === 'image/jpeg';
+      if (!isJPG) {
+        this.$message.error('Can upload JPG only!');
+        return false; // 阻止上传
+      }
+
       this.selectedFile = file;
 
       const reader = new FileReader();
@@ -112,6 +119,11 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
 }
 
 .upload-demo {
