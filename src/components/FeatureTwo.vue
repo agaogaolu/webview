@@ -90,6 +90,7 @@ export default {
 }
 
 .main {
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -109,6 +110,11 @@ export default {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: start;
 }
 
 .upload-demo {

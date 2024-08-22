@@ -26,6 +26,7 @@ service.interceptors.response.use(
     const res = response.data;
     // console.log(response)
     if (response.status !== 200) {
+      console.log("response.status !== 200")
       // 假设返回数据格式中有一个 code 字段表示错误或成功
       // 你可以根据 res.code 做一些处理
       return Promise.reject(new Error(res.message || 'Error'));
@@ -34,6 +35,7 @@ service.interceptors.response.use(
     }
   },
   error => {
+    console.log("error process")
     // 处理响应错误
     return Promise.reject(error);
   }
