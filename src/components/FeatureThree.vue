@@ -104,6 +104,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   gap: 10%;
+  overflow-y: visible;
 }
 
 .left {
